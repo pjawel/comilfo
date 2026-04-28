@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-brand-cream: #fbf9f4;
+  --color-brand-coffee: #2c1e14;
+  --color-brand-warm-accent: #8e735b;
+  --color-brand-gold: #b28a41;
+  --color-brand-olive: #4a4a35;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-coffee font-sans antialiased;
+    cursor: default;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(251, 249, 244, 0.4);
+  }
+  
+  .grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  .mask-oval {
+    clip-path: ellipse(45% 50% at 50% 50%);
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+}
