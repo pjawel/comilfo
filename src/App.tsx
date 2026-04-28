@@ -369,6 +369,56 @@ export default function App() {
         </div>
       </section>
 
+      {/* NOWA SEKCJA: Domowe Wypieki */}
+      <section className="py-40 bg-brand-cream/30">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-24 space-y-4">
+            <h2 className="text-5xl md:text-7xl">Rzemieślnicze <span className="text-brand-gold italic">Wypieki</span></h2>
+            <p className="text-brand-coffee/40 uppercase tracking-[0.2em] text-xs font-bold">Codziennie coś słodkiego prosto z pieca</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              className="relative aspect-square rounded-[5rem] overflow-hidden shadow-2xl"
+            >
+              <img src={IMAGES[0].url} alt="Wypieki" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-brand-coffee/10" />
+            </motion.div>
+
+            <div className="space-y-10">
+              <div className="space-y-6">
+                <h3 className="text-4xl md:text-5xl italic font-serif">Słodka Strona Comilfo</h3>
+                <p className="text-brand-coffee/70 text-lg leading-relaxed">
+                  Nasze ciasta i desery to nie tylko smak, to wspomnienie niedzielnych poranków. 
+                  Wybieramy tylko naturalne składniki: prawdziwe masło, wiejskie jaja i sezonowe owoce od lokalnych dostawców.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <h4 className="font-bold uppercase tracking-widest text-brand-gold text-xs">Bezy Comilfo</h4>
+                  <p className="text-sm text-brand-coffee/60">Lekkie jak chmurka, z musem owocowym i świeżymi owocami.</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold uppercase tracking-widest text-brand-gold text-xs">Sernik Domowy</h4>
+                  <p className="text-sm text-brand-coffee/60">Aksamitna konsystencja na kruchym spodzie, wedle sekretnej receptury.</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold uppercase tracking-widest text-brand-gold text-xs">Szarlotka na Ciepło</h4>
+                  <p className="text-sm text-brand-coffee/60">Z cynamonem i gałką lodów waniliowych — klasyka, która nie nudzi.</p>
+                </div>
+                <div className="space-y-2">
+                  <h4 className="font-bold uppercase tracking-widest text-brand-gold text-xs">Tarty Sezonowe</h4>
+                  <p className="text-sm text-brand-coffee/60">Zawsze to, co najlepsze w danej porze roku, zamknięte w kruchym cieście.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lokalizacja i Kontakt */}
       <section id="lokalizacja" className="py-40 bg-brand-coffee text-brand-cream relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
