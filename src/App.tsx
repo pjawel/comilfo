@@ -116,7 +116,7 @@ export default function App() {
               className="h-10 w-auto hover:scale-110 transition-transform"
             />
             <div className="hidden md:flex space-x-8">
-              {['Galeria', 'Historia', 'Menu', 'Opinie', 'Zespół', 'Lokalizacja'].map((item) => (
+              {['Galeria', 'Historia', 'Menu', 'Opinie', 'Lokalizacja'].map((item) => (
                 <a 
                   key={item}
                   href={`#${item.toLowerCase()}`} 
@@ -427,42 +427,6 @@ export default function App() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* NOWA SEKCJA: Nasz Zespół */}
-      <section id="zespół" className="py-40 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
-            <div className="space-y-4">
-              <h2 className="text-6xl md:text-8xl text-brand-coffee leading-tight">Ludzie <br/><span className="text-brand-gold italic">z Pasją</span></h2>
-              <p className="text-brand-warm-accent max-w-sm text-lg leading-relaxed">Poznaj osoby, które każdego dnia dbają o to, by każda wizyta w Comilfo była wyjątkowa.</p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              { name: "Kasia", role: "Właścicielka & Serce", img: IMAGES[1]?.url },
-              { name: "Ania", role: "Mistrzyni Kawy", img: IMAGES[14]?.url },
-              { name: "Piotr", role: "Cukiernik", img: IMAGES[13]?.url }
-            ].map((member, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.2 }}
-                className="group cursor-pointer"
-              >
-                <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden mb-8 shadow-xl">
-                  <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-brand-gold/10 group-hover:bg-transparent transition-colors" />
-                </div>
-                <h4 className="text-2xl font-bold tracking-tight">{member.name}</h4>
-                <p className="text-brand-gold font-serif italic">{member.role}</p>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
